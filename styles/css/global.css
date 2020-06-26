@@ -1,0 +1,173 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro';
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	
+}
+
+button:focus{
+	outline: none;
+}
+
+.banner{
+	background: linear-gradient(to right,#0080ff,#0050ee 90%);
+	box-shadow: 0 0 8px 0 #000000;
+	color: #eeeeee;
+	height: 50px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+.banner .drawer-button{
+	background: #0080ff;
+	color: #eeeeee;
+	border: none;
+	height: 50px;
+	transition: 0.2s;
+	width: 50px;
+}
+.banner .drawer-button:hover{
+	background: #eeeeee;
+	color: #000000;
+}
+.banner .title{
+	left: 60px;
+	margin: 0;
+	padding: 5px 0 0 0;
+	position: fixed;
+	top: 0;
+}
+.banner-button{
+	border: solid 2px #000000;
+	border-radius: 5px;
+	float: right;
+	font: bold 14px Source Sans Pro;
+	height: 40px;
+	margin: 5px;
+	width: 100px;
+}
+
+.unlock-button{
+	background: #0050ee;
+	border: none;
+	color: #eeeeee;
+	float: right;
+	height: 50px;
+	transition: 0.2s;
+	width: 50px;
+}
+.unlock-button:hover{
+	background: #eeeeee;
+	color: #000000;
+}
+.unlock-button.highlighted{
+	background: #eeeeee;
+	color: #000000;
+}
+
+
+.menu-pane{
+	background: linear-gradient(#555555 10%,#222222);
+	box-shadow: inset -2px 0 5px 0 #000000;
+	color: #eeeeee;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 50px;
+	transition: 0.2s;
+	width: 200px;
+	z-index: 1;
+}
+.menu-pane.collapsed{
+	width: 0px;
+}
+.menu-pane .menu-button{
+	background: none;
+	border: none;
+	color: #eeeeee;
+	font: bold 16px Roboto;
+	height: 50px;
+	left: 0;
+	position: relative;
+	transition: background 0.2s, color 0.2s, left 0.2s 0.1s;
+	width: 100%;
+}
+.menu-pane .menu-button:hover{
+	background: #eeeeee;
+	box-shadow: inset -2px 0 4px 0 #000000;
+	color: #000000;
+}
+.menu-pane .menu-button-text{
+	opacity: 1;
+	overflow: hidden;
+	transition: opacity 0.1s 0.2s;
+}
+.menu-pane.collapsed .menu-button-text{
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 0.1s 0s;
+}
+
+.content{
+	background: linear-gradient(#202020 10%,#101010);
+	color: #eeeeee;
+	height: 100%;
+	padding: 70px 0 10px 220px;
+	position: absolute;
+	transition: 0.2s;
+	width: 100%;
+}
+.content.collapsed{
+	padding: 70px 0 10px 20px;
+}
+
+.login-menu{
+	background: #eeeeee;
+	display: block;
+	padding: 20px;
+	position: fixed;
+	right: 0;
+	top: 50px;
+	z-index: 999;
+}
+.login-menu button, .login-menu label, .login-menu input, .login-menu p{
+	margin: 5px 0;
+}
+.login-menu button{
+	padding: 5px 20px;
+}
+
+.hidden{
+	display: none;
+}
+
+.material-icons{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face{
+	font-family: 'Source Sans Pro';
+	src: url(/styles/webfonts/SourceSansPro.woff2) format('woff2');
+}
+@font-face{
+	font-family: 'Material Icons';
+	src: url(/styles/webfonts/MaterialIcons.woff2) format('woff2');
+}

@@ -1,0 +1,12 @@
+{
+	"users": [
+		{
+			"username": "ctirpak",
+			"password": "login123"
+		},
+		{
+			"username": "admin",
+			"password": "password"
+		}
+	]
+}

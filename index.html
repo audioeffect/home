@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href=".\styles\css\global.css" id="style-global"></link>
+</head>
+
+<body>
+	<div class="banner">
+		<button class="drawer-button" onclick="javascript:toggleDrawer();"><i class="material-icons">menu</i></button>
+		<h1 class="title">CTirpak</h1>
+		<button id="unlock" class="unlock-button" onclick="javascript:toggleLogin();"><i id="unlockIcon" class="material-icons">lock</i></button>
+	</div>
+	<div id="menuPane" class="menu-pane collapsed">
+		<button class="menu-button"><span class="menu-button-text">Test 1</span></button>
+		<button class="menu-button"><span class="menu-button-text">Test 2</span></button>
+		<button class="menu-button"><span class="menu-button-text">Test 3</span></button>
+	</div>
+	
+	<div id="loginMenu" class="login-menu hidden">
+		<label for="userLogin">Username:</label><br>
+		<input id="userLogin" name="userLogin" type="text" required></input><br>
+		<label for="passLogin">Password:</label><br>
+		<input id="passLogin" name="passLogin" type="password" required></input><br>
+		<button id="login" type="submit" onclick="javascript:getRequest(admins,validateLogin);">Login</button>
+		<p id="login-hint"></p>
+	</div>
+	
+	<div class="login-form hidden">
+		<label for="userRegister">Username:</label><br>
+		<input id="userRegister" name="userRegister" type="text" required></input><br>
+		<label for="passRegister">Password:</label><br>
+		<input id="passRegister" name="passRegister" type="password" required></input><br>
+		<label for="passRegisterConfirm">Retype Password:</label><br>
+		<input id="passRegisterConfirm" name="passRegisterConfirm" type="password" required></input><br>
+		<button id="register" type="submit" onclick="javascript:getRequest(admins,validateRegistration);">Register</button>
+		<p id="register-hint"></p>
+	</div>
+	
+	<div id="content" class="content collapsed">
+		<h1>Test</h1>
+	</div>
+	
+	<script src=".\scripts\js\main.js"></script>
+</body>
+</html>

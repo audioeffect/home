@@ -1,0 +1,29 @@
+{
+	"players": [
+		{
+			"name": "Kai"
+		},
+		{
+			"name": "Zoe"
+		}
+	],
+	"player_dashboard": [
+		{
+			"tag": "h1",
+			"new_id": "heading",
+			"new_class": "header text",
+			"new_text": "JSON"
+		},
+		{
+			"tag": "p",
+			"new_class": "article text",
+			"new_text": "This group of elements was created using JSON and XMLHttpRequest. Clicking on the button below will demonstrate how versatile this can be."
+		},
+		{
+			"tag": "button",
+			"new_class": "test-button",
+			"new_text": "Click me",
+			"new_onclick": "javascript:changeText();"
+		}
+	]
+}
