@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
+	<title>Index</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="stylesheet" href=".\styles\css\global.css" id="style-global"></link>
+	<script src=".\scripts\js\playerdashboard.js"></script>
 </head>
 
 <body>
@@ -14,9 +15,8 @@
 		<button id="unlock" class="unlock-button" onclick="javascript:toggleLogin();"><i id="unlockIcon" class="material-icons">lock</i></button>
 	</div>
 	<div id="menuPane" class="menu-pane collapsed">
-		<button class="menu-button"><span class="menu-button-text">Test 1</span></button>
-		<button class="menu-button"><span class="menu-button-text">Test 2</span></button>
-		<button class="menu-button"><span class="menu-button-text">Test 3</span></button>
+		<button class="menu-button" onclick=""><span class="menu-button-text">Home</span></button>
+		<button class="menu-button" onclick=""><span class="menu-button-text">Rewards+</span></button>
 	</div>
 	
 	<div id="loginMenu" class="login-menu hidden">
@@ -40,7 +40,8 @@
 	</div>
 	
 	<div id="content" class="content collapsed">
-		<h1>Test</h1>
+		<div id="playerTabList" class="player-tab-list"></div>
+		<div id="playerDashboard" class="player-dashboard"></div>
 	</div>
 	
 	<script src=".\scripts\js\main.js"></script>

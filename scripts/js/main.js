@@ -1,8 +1,7 @@
 var admins = '/scripts/json/admins.json';
-var playerData = '/scripts/json/playerdata.json';
 
 window.onload = function(){
-	
+	getRequest(playerData, getPlayers);
 };
 
 function getRequest(url, callback){
@@ -67,29 +66,6 @@ function validateRegistration(xhttp){
 	}
 	else{
 		registerHint.innerHTML = 'Registration failed';
-	}
-}
-
-function getPlayers(xhttp){
-	var object = JSON.parse(xhttp.responseText);
-	
-	if(object.new_elements){
-		var newElem = object.new_elements;
-		
-		for(var i=0;i<newElem.length;i++){
-			var temp = document.createElement(newElem[i].tag);
-			
-			if(newElem[i].new_id)
-				temp.id = newElem[i].new_id;
-			if(newElem[i].new_class)
-				temp.className = newElem[i].new_class;
-			if(newElem[i].new_text)
-				temp.innerHTML = newElem[i].new_text;
-			if(newElem[i].new_onclick)
-				temp.setAttribute('onclick', newElem[i].new_onclick);
-			
-			content.appendChild(temp);
-		}
 	}
 }
 

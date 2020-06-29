@@ -9,21 +9,51 @@
 	],
 	"player_dashboard": [
 		{
-			"tag": "h1",
-			"new_id": "heading",
-			"new_class": "header text",
-			"new_text": "JSON"
+			"tag": "button",
+			"new_id": "PLAYER_NAME",
+			"new_id_append": "Tab",
+			"new_class": "player-tab",
+			"new_text": "PLAYER_NAME",
+			"new_onclick": "javascript:selectDashboard();",
+			"parent": "playerTabList"
+		},
+		{
+			"tag": "div",
+			"new_id": "PLAYER_NAME",
+			"new_id_append": "Container",
+			"new_class": "",
+			"parent": "playerDashboard"
 		},
 		{
 			"tag": "p",
-			"new_class": "article text",
-			"new_text": "This group of elements was created using JSON and XMLHttpRequest. Clicking on the button below will demonstrate how versatile this can be."
+			"new_class": "",
+			"new_text": "This group of elements was created using JSON and XMLHttpRequest. Clicking on the button below will demonstrate how versatile this can be.",
+			"parent": "PLAYER_CONTAINER"
 		},
 		{
 			"tag": "button",
-			"new_class": "test-button",
+			"new_id": "test",
+			"new_class": "",
 			"new_text": "Click me",
-			"new_onclick": "javascript:changeText();"
+			"new_onclick": "javascript:changeText();",
+			"parent": "PLAYER_CONTAINER"
+		}
+	],
+	"new_player": [
+		{
+			"tag": "button",
+			"new_id": "addPlayer",
+			"new_class": "player-tab",
+			"new_text": "+",
+			"new_onclick": "javascript:selectDashboard();",
+			"parent": "playerTabList"
+		},
+		{
+			"tag": "div",
+			"new_id": "addPlayerPage",
+			"new_class": "add-player-page hidden",
+			"new_text": "Add Player",
+			"parent": "playerDashboard"
 		}
 	]
 }
