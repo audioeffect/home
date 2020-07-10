@@ -73,13 +73,13 @@ function toggleDrawer(){
 	var menuPane = document.getElementById('menuPane');
 	var content = document.getElementById('content');
 	
-	if(menuPane.classList.contains('collapsed')){
-		menuPane.classList.remove('collapsed');
-		content.classList.remove('collapsed');
+	if(menuPane.classList.contains('opened')){
+		menuPane.classList.remove('opened');
+		content.classList.remove('opened');
 	}
 	else{
-		menuPane.classList.add('collapsed');
-		content.classList.add('collapsed');
+		menuPane.classList.add('opened');
+		content.classList.add('opened');
 	}
 }
 

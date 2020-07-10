@@ -1,5 +1,5 @@
 var playerData = '/scripts/json/playerdata.json';
-var players = [];
+var playerList = [];
 var activeDashboard = 0;
 
 function getPlayers(xhttp){
@@ -53,13 +53,15 @@ function getPlayers(xhttp){
 			}
 		}
 		
+		playerList.push(temp);
+				
 		if(i==0){
 			document.getElementById(tempPlayerName + 'Tab').classList.add('highlighted');
 		}
 		if(i>0){
 			document.getElementById(tempPlayerName + 'Container').classList.add('hidden');
-			dashboardCount++;
 		}
+		
 	}
 	
 	for(var i=0;i<newPlayer.length;i++){
@@ -76,4 +78,8 @@ function getPlayers(xhttp){
 		if(newPlayer[i].parent)
 			document.getElementById(newPlayer[i].parent).appendChild(temp);
 	}
+}
+
+function selectDashboard(){
+	console.log(playerList);
 }

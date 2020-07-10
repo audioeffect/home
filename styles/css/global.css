@@ -24,15 +24,15 @@ button:focus{
 	width: 100%;
 	z-index: 2;
 }
-.banner .drawer-button{
-	background: #0080ff;
+.banner button{
+	background: none;
 	color: #eeeeee;
 	border: none;
 	height: 50px;
 	transition: 0.2s;
 	width: 50px;
 }
-.banner .drawer-button:hover{
+.banner button:hover{
 	background: #eeeeee;
 	color: #000000;
 }
@@ -43,28 +43,9 @@ button:focus{
 	position: fixed;
 	top: 0;
 }
-.banner-button{
-	border: solid 2px #000000;
-	border-radius: 5px;
-	float: right;
-	font: bold 14px Source Sans Pro;
-	height: 40px;
-	margin: 5px;
-	width: 100px;
-}
 
-.unlock-button{
-	background: #0050ee;
-	border: none;
-	color: #eeeeee;
+#unlock{
 	float: right;
-	height: 50px;
-	transition: 0.2s;
-	width: 50px;
-}
-.unlock-button:hover, .player-tab:hover{
-	background: #eeeeee;
-	color: #000000;
 }
 
 .menu-pane{
@@ -76,11 +57,11 @@ button:focus{
 	position: fixed;
 	top: 50px;
 	transition: 0.2s;
-	width: 200px;
+	width: 0;
 	z-index: 1;
 }
-.menu-pane.collapsed{
-	width: 0px;
+.menu-pane.opened{
+	width: 200px;
 }
 .menu-pane .menu-button{
 	background: none;
@@ -99,27 +80,27 @@ button:focus{
 	color: #000000;
 }
 .menu-pane .menu-button-text{
-	opacity: 1;
-	overflow: hidden;
-	transition: opacity 0.1s 0.2s;
-}
-.menu-pane.collapsed .menu-button-text{
 	opacity: 0;
 	overflow: hidden;
 	transition: opacity 0.1s 0s;
+}
+.menu-pane.opened .menu-button-text{
+	opacity: 1;
+	overflow: hidden;
+	transition: opacity 0.1s 0.2s;
 }
 
 .content{
 	background: linear-gradient(#202020 10%,#101010);
 	color: #eeeeee;
 	height: 100%;
-	padding: 50px 0 10px 200px;
+	padding: 50px 0 10px 0;
 	position: absolute;
 	transition: 0.2s;
 	width: 100%;
 }
-.content.collapsed{
-	padding: 50px 0 10px 0;
+.content.opened{
+	padding: 50px 0 10px 200px;
 }
 
 .login-menu{

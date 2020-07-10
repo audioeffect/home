@@ -10,15 +10,10 @@
 
 <body>
 	<div class="banner">
-		<button class="drawer-button" onclick="javascript:toggleDrawer();"><i class="material-icons">menu</i></button>
+		<button onclick="javascript:toggleDrawer();"><i class="material-icons">menu</i></button>
 		<h1 class="title">CTirpak</h1>
-		<button id="unlock" class="unlock-button" onclick="javascript:toggleLogin();"><i id="unlockIcon" class="material-icons">lock</i></button>
+		<button id="unlock" onclick="javascript:toggleLogin();"><i id="unlockIcon" class="material-icons">lock</i></button>
 	</div>
-	<div id="menuPane" class="menu-pane collapsed">
-		<button class="menu-button" onclick=""><span class="menu-button-text">Home</span></button>
-		<button class="menu-button" onclick=""><span class="menu-button-text">Rewards+</span></button>
-	</div>
-	
 	<div id="loginMenu" class="login-menu hidden">
 		<label for="userLogin">Username:</label><br>
 		<input id="userLogin" name="userLogin" type="text" required></input><br>
@@ -27,7 +22,6 @@
 		<button id="login" type="submit" onclick="javascript:getRequest(admins,validateLogin);">Login</button>
 		<p id="login-hint"></p>
 	</div>
-	
 	<div class="login-form hidden">
 		<label for="userRegister">Username:</label><br>
 		<input id="userRegister" name="userRegister" type="text" required></input><br>
@@ -39,7 +33,12 @@
 		<p id="register-hint"></p>
 	</div>
 	
-	<div id="content" class="content collapsed">
+	<div id="menuPane" class="menu-pane">
+		<button class="menu-button" onclick=""><span class="menu-button-text">Home</span></button>
+		<button class="menu-button" onclick=""><span class="menu-button-text">Rewards+</span></button>
+	</div>
+	
+	<div id="content" class="content">
 		<div id="playerTabList" class="player-tab-list"></div>
 		<div id="playerDashboard" class="player-dashboard"></div>
 	</div>
